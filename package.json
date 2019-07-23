@@ -1,0 +1,13 @@
+{
+  "name": "smspro-nikita",
+  "description": "smspro.nikita.kg nodejs sdk",
+  "version": "1.0.0",
+  "repository": "2rusbekov/smspro-nikita",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "fast-xml-parser": "^3.12.17",
+    "request": "^2.88.0",
+    "uniqid": "^5.0.3"
+  }
+}
