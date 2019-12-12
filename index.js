@@ -61,7 +61,7 @@ class Sms {
      8 Неверный формат времени отправки
      9 Отправка заблокирована из-за срабатывания SPAM фильтра.
      10 Отправка заблокирована из-за последовательного повторения id (ошибочная переотправка)
-     11 Сообщение успешно обработано, но не принято к отправк
+     11 Сообщение успешно обработано, но не принято к отправке
      */
     async sendMessage(message, phones, time, test) {
         let data = {
@@ -194,7 +194,7 @@ class Sms {
 
     async sendXMLRequest(data, action) {
         let xml = new Parser.j2xParser({}).parse(data);
-        console.log(xml);
+        //console.log(xml);
         let url = (this.useHttp ? HTTP : HTTPS) + API_URL + action;
         let result = await new Promise((resolve, reject) => {
             request.post(url, {body: xml}, function (error, response, body) {
@@ -208,7 +208,7 @@ class Sms {
 
         let tObj = Parser.getTraversalObj(result, {});
         let jsonObj = Parser.convertToJson(tObj, {});
-        console.log(jsonObj);
+        //console.log(jsonObj);
         return jsonObj.response;
     }
 
