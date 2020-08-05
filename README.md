@@ -15,7 +15,7 @@ npm i -s smspro-nikita
     const sms = new Sms('username', 'password', 'registeredSenderID');
 
     let result = await sms.sendMessage('message', ['996xxxxxxxxx'])
-    // let result = await sms.getAbonentInfo('996772668689')
+    // let result = await sms.getAbonentInfo('996123456789')
     // let result = await sms.getAccountInfo()
          .catch((e) => {
              console.log(e);
